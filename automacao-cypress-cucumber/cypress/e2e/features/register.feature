@@ -12,3 +12,5 @@ Feature: Realizar cadastro
     And marco o checkbox de maioridade
     And clico no botão de submeter o formulário
     Then serei redirecionado para a tela de agradecimento
+
+# dispara workflow do github actions
