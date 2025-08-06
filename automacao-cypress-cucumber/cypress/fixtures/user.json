@@ -1,0 +1,8 @@
+{
+  "user":{
+    "name": "Fulano",
+    "lastname": "Tester",
+    "email": "fulano@email.qa.com",
+    "password": "Senh@123"
+  }
+}

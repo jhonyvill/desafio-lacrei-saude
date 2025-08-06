@@ -1,0 +1,25 @@
+{
+  "name": "desafio-automacao",
+  "version": "1.0.0",
+  "description": "Projeto de automação do desafio lacrei saúde",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "author": "Jhony Vill da Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+    "cypress": "^14.5.3",
+    "esbuild": "^0.25.8"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/step_definitions/**/*.js",
+    "html": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-report.html"
+    }
+  }
+}
