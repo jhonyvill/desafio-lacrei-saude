@@ -55,3 +55,5 @@ Caso tenha interesse na execução sem abrir a interface do Cypress, no modo hea
 ```
 npm run test
 ```
+
+Você pode verificar o relatório de execução local gerado em arquivo HTML no diretório **cypress/reports/** do projeto de automação.
