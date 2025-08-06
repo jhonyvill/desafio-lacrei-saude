@@ -57,3 +57,11 @@ npm run test
 ```
 
 Você pode verificar o relatório de execução local gerado em arquivo HTML no diretório **cypress/reports/** do projeto de automação.
+
+## Pipeline de integração contínua
+
+Para a integração contínua está sendo utilizado o Github Actions, disparando ação de execução a cada alteração realizada no projeto de automação e encaminhada ao repositório remoto.
+
+O relatório de execução de testes do projeto de automação executado em workflow está sendo armazenado como artefato no próprio workflow.
+
+Para acessar o arquivo, acesse a aba "Actions" no presente repositório remoto e selecione o workflow, depois localize a seção "Artifacts". O arquivo terá o nome "cucumber-html-report".
