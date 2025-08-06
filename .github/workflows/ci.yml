@@ -1,4 +1,5 @@
 name: End-to-end tests
+
 on:
   push:
     paths:
@@ -6,19 +7,26 @@ on:
   pull_request:
     paths:
       - "automacao-cypress-cucumber/**"
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
+
+    defaults:
+      run:
+        working-directory: automacao-cypress-cucumber
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install dependencies
         run: npm install
-        working-directory: automacao-cypress-cucumber
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        with:
+          working-directory: automacao-cypress-cucumber
 
       - name: Salvar relatórios
         uses: actions/upload-artifact@v4
