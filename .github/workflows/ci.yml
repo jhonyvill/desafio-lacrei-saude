@@ -1,0 +1,21 @@
+name: End-to-end tests
+on:
+  push:
+    paths:
+      - "automacao-cypress-cucumber/**"
+  pull_request:
+    paths:
+      - "automacao-cypress-cucumber/**"
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+      - name: Salvar relatórios
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-html-report
+          path: automacao-cypress-cucumber/cypress/reports/cucumber-report.html
