@@ -13,3 +13,4 @@ Feature: Realizar cadastro
     And clico no botão de submeter o formulário
     Then serei redirecionado para a tela de agradecimento
 
+# dispara workflow do github actions
