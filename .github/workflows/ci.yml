@@ -33,3 +33,4 @@ jobs:
         with:
           name: cucumber-html-report
           path: automacao-cypress-cucumber/cypress/reports/cucumber-report.html
+          retention-days: 90
